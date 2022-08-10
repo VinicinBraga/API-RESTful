@@ -12,6 +12,8 @@ function useFetch(url) {
         setData(response.data);
       })
       .finally(() => {
+        // .then (Sucesso) e .catch (Erro)
+        // Mas se eu quiser executar algo no useEfect, seja no erro ou sucesso, eu uso o ".finally"
         setIsFetching(false);
       });
   }, [url]);
