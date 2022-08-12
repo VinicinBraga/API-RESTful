@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const api = axios.create({ baseURL: "https://api.github.com/" });
+
 function useFetch(url) {
   const [data, setData] = useState(null);
   const [isFetching, setIsFetching] = useState(true);
 
   useEffect(() => {
-    axios
+    api
       .get(url)
       .then((response) => {
+        console.log(response.data);
         setData(response.data);
       })
       .finally(() => {
