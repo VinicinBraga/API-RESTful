@@ -14,21 +14,21 @@ import axios from 'axios'
    console.log(`Com o fetch -> ${data.slip.advice}`)
 } 
 
-buscarFrasesComFetch()
+//buscarFrasesComFetch()
 
 //axios(Frases)
 const buscarFrasesComAxios = async () => {
   const response = await axios.get('http://api.adviceslip.com/advice')
   console.log(`Com o Axios -> ${response.data.slip.advice}`)
 }
-buscarFrasesComAxios()
+//buscarFrasesComAxios()
 
 //---------------------------------------
 
 //fetch(Traduçoes)
 const buscatTraducoesComFetch = async () => {
   const body = { text: 'Hello my friend' }
-  const response = await fetch('https://api.funtranslations.com/translate/yoda', {
+  const response = await fetch('https://api.funtranslations.com/translate/pirate', {
     method: 'POST',
     body: JSON.stringify(body),
     headers: {'content-type': 'application/json'}
@@ -41,7 +41,7 @@ buscatTraducoesComFetch()
 //axios(Traduçoes)
 const buscatTraducoesComAxios = async () => {
   const body = { text: 'Hello my friend' }
-  const response = await axios.post('https://api.funtranslations.com/translate/yoda')
+  const response = await axios.post('https://api.funtranslations.com/translate/pirate')
   console.log(response.data)
  
 }
