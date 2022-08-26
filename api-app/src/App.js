@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Post from "./components/pages/post";
-import Edit from "./components/pages/edit";
-import Feed from "./components/pages/feed";
-import Details from "./components/pages/details";
+import Post from "./pages/Post/post";
+import Edit from "./pages/Edit/edit";
+import Feed from "./pages/Feed/feed";
+import Details from "./pages/Details/details";
 
 function App() {
   return (
@@ -12,9 +11,9 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Feed />} />
-          <Route exact path="/post" element={<Post />} />
-          <Route exact path="/edit" element={<Edit />} />
-          <Route exact path="/details" element={<Details />} />
+          <Route path="/post" element={<Post />} />
+          <Route path="/edit" element={<Edit />} />
+          <Route path="/details" element={<Details />} />
         </Routes>
       </Router>
     </div>
