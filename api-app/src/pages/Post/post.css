@@ -92,5 +92,9 @@ textarea {
 }
 
 .error-message {
-    color: rgb(240, 47, 47);
+    color: rgb(238, 129, 5);
+    font-family: Poppins;
+    font-style: italic;
+    font-size:medium;
+    margin-top: 2px;
 }
