@@ -9,7 +9,7 @@ function Header() {
     <header>
       <div className="container">
         <Link to="/">
-          <img src={Back} style={{ width: "50px" }}></img>
+          <img src={Back} alt="arrow-left" style={{ width: "50px" }}></img>
         </Link>
       </div>
     </header>
